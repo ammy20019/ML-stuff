@@ -1,0 +1,21 @@
+#AIM
+Implementing Expectation-Maximization algorithm using wholesale customer data.
+
+##Methodology
+We can implement Expectation Maximization algorithm with gaussian mixture models.
+
+Gaussian mixture models (GMM) are a probabilistic model for representing normally distributed subpopulations within an overall population. Mixture models in general don't require knowing which subpopulation a data point belongs to, allowing the model to learn the subpopulations automatically. Since subpopulation assignment is not known, this constitutes a form of unsupervised learning.
+
+##Implementation
+We have 8 features and 440 data rows
+ 	Channel 	Region 	Fresh 	Milk 	Grocery 	Frozen 	Detergents_Paper 	Delicassen
+
+Dropping "Region" feature from dataset as it has a constant value in all data.
+Then we are implementing GMM with 2 components.
+Later on are predicting the latent values by
+ yhat = model.predict(data)
+
+ GMM contains a probabilistic model under the hood, it is also possible to find probabilistic cluster assignments.At last we are calculating the probability whether our prediction is matching upto expectation or not.  measuring the probability that any point belongs to the given cluster.
+probs = model.predict_proba(data)
+
+Here are some calculated probabilities
